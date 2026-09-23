@@ -61,8 +61,8 @@ export default function Contact() {
 
   return (
     <PageTransition>
-      <section className="pt-32 pb-section px-6 min-h-[70vh] flex items-center">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="pt-32 pb-section px-5 sm:px-6 min-h-[70vh] flex items-center">
+        <div className="max-w-2xl mx-auto text-center min-w-0">
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Contact() {
             className="text-left space-y-5 mb-12"
           >
             <div className="grid sm:grid-cols-2 gap-5">
-              <div>
+              <div className="min-w-0">
                 <label htmlFor="name" className="block text-xs uppercase tracking-wider text-muted mb-2">
                   Votre nom
                 </label>
@@ -101,10 +101,10 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Jean Dupont"
-                  className={inputClasses}
+                  className={`${inputClasses} min-w-0`}
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <label htmlFor="email" className="block text-xs uppercase tracking-wider text-muted mb-2">
                   Votre email
                 </label>
@@ -116,7 +116,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="jean@exemple.com"
-                  className={inputClasses}
+                  className={`${inputClasses} min-w-0`}
                 />
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function Contact() {
             <div className="relative">
               <button
                 onClick={handleCopy}
-                className="bg-gold text-night font-medium px-6 py-3 rounded-sm hover:brightness-110 transition-all duration-200"
+                className="bg-gold text-night font-medium px-4 sm:px-6 py-3 rounded-sm hover:brightness-110 transition-all duration-200 text-sm sm:text-base break-all max-w-full"
               >
                 {EMAIL}
               </button>
@@ -211,10 +211,6 @@ export default function Contact() {
                 )}
               </AnimatePresence>
             </div>
-
-            <a href={`mailto:${EMAIL}`} className="text-sm text-muted hover:text-gold underline underline-offset-4">
-              Ouvrir dans votre messagerie
-            </a>
 
             <div className="flex flex-col sm:flex-row gap-6 mt-6 text-muted text-sm">
               <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-gold">
