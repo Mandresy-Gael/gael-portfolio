@@ -34,7 +34,7 @@ export default function Navbar() {
           Gaël <span className="text-gold">R.</span>
         </NavLink>
 
-        <ul className="hidden md:flex items-center gap-8 font-body text-sm text-muted">
+        <ul className="hidden lg:flex items-center gap-8 font-body text-sm text-muted">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink to={link.to} className={linkClass} end={link.to === "/"}>
@@ -47,7 +47,7 @@ export default function Navbar() {
         <a
           href="/cv/CV-Gael-Randriamanana.pdf"
           download
-          className="hidden md:inline-block border border-gold text-gold text-sm px-4 py-2 rounded-sm hover:bg-gold hover:text-night transition-colors duration-200"
+          className="hidden lg:inline-block border border-gold text-gold text-sm px-4 py-2 rounded-sm hover:bg-gold hover:text-night transition-colors duration-200"
         >
           Télécharger le CV
         </a>
@@ -56,7 +56,7 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           aria-label="Ouvrir le menu"
           aria-expanded={open}
-          className="md:hidden text-cream w-8 h-6 flex flex-col justify-between"
+          className="lg:hidden text-cream w-8 h-6 flex flex-col justify-between"
         >
           <span className={`h-px bg-current transition-transform duration-200 ${open ? "translate-y-[11px] rotate-45" : ""}`} />
           <span className={`h-px bg-current transition-opacity duration-200 ${open ? "opacity-0" : ""}`} />
@@ -71,7 +71,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden bg-night border-b border-border"
+            className="lg:hidden overflow-hidden bg-night border-b border-border"
           >
             <ul className="flex flex-col px-6 py-4 gap-4 font-body text-muted">
               {links.map((link) => (
