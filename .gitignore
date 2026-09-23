@@ -1,0 +1,26 @@
+ # Dependances                                                                                                                        
+     node_modules/                                                                                                                       
+     # Build                                                                                                                              
+     dist/                                                                                                                                      
+     dist-ssr/                                                                                                                             
+     *.local                                                                                                                              
+                                                                                                                                                
+     # Vercel                                                                                                                            
+     .vercel/                                                                                                                             
+                                                                                                                                       
+     # Environnement                                                                                                                     
+     .env                                                                                                                                  
+     .env.*                                                                                                                             
+     !.env.example                                                                                                                              
+                                                                                                                                                
+     # Logs                                                                                                                                     
+     logs/                                                                                                                                      
+     *.log                                                                                                                                      
+     npm-debug.log*                                                                                                                             
+                                                                                                                                                
+     # Editeurs / OS                                                                                                                            
+     .vscode/*                                                                                                                                  
+     !.vscode/extensions.json                                                                                                                   
+     .idea/                                                                                                                                     
+     .DS_Store                                                                                                                                  
+     Thumbs.db          
