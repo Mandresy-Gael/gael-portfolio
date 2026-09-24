@@ -45,7 +45,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="/cv/CV-Gael-Randriamanana.pdf"
+          href="/cv/CV%20professionnel.pdf"
           download
           className="hidden lg:inline-block border border-gold text-gold text-sm px-4 py-2 rounded-sm hover:bg-gold hover:text-night transition-colors duration-200"
         >
@@ -82,7 +82,7 @@ export default function Navbar() {
                 </li>
               ))}
               <li>
-                <a href="/cv/CV-Gael-Randriamanana.pdf" download onClick={() => setOpen(false)} className="text-gold">
+                <a href="/cv/CV%20professionnel.pdf" download onClick={() => setOpen(false)} className="text-gold">
                   Télécharger le CV
                 </a>
               </li>
