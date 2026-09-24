@@ -22,7 +22,7 @@ const langues = [
 
 const competences = [
   { title: "Bureautiques", items: ["Word", "Excel"] },
-  { title: "Programmation", items: ["Base en HTML/CSS", "Python"] },
+  { title: "Programmation", items: ["Base en HTML/CSS", "Python","ReactJS", "NodeJS","ExpressJS","PHP", "TailwindCSS", "MySQL"] },
 ];
 
 const qualites = ["Rigoureux", "Ponctuel", "Minutieux"];
