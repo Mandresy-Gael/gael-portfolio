@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Phone, Mail } from "lucide-react";
+import { GithubIcon, FacebookIcon, InstagramIcon } from "../components/SocialIcons.jsx";
 import emailjs from "@emailjs/browser";
 import PageTransition from "../components/PageTransition.jsx";
 
 const EMAIL = "randriamananamandresygael@gmail.com";
-const PHONE = "032 66 944 96";
-const ADDRESS = "Majunga, Madagascar";
+const PHONE = "037 57 153 35";
 
 const EMAILJS_SERVICE_ID = "service_im8g34b";
 const EMAILJS_TEMPLATE_ID = "template_xnsp08t";
@@ -212,18 +213,41 @@ export default function Contact() {
               </AnimatePresence>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 mt-6 text-muted text-sm">
-              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-gold">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mt-6 text-muted text-sm">
+              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 hover:text-gold transition-colors duration-200">
+                <Phone size={18} />
                 {PHONE}
               </a>
-              <span>{ADDRESS}</span>
+              <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 hover:text-gold transition-colors duration-200">
+                <Mail size={18} />
+                {EMAIL}
+              </a>
               <a
                 href="https://github.com/Mandresy-Gael"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-gold"
+                className="inline-flex items-center gap-2 hover:text-gold transition-colors duration-200"
               >
-                github.com/Mandresy-Gael
+                <GithubIcon size={18} />
+                GitHub
+              </a>
+              <a
+                href="https://www.facebook.com/mandresy.randriamanana.79"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 hover:text-gold transition-colors duration-200"
+              >
+                <FacebookIcon size={18} />
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/simply.gael_/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 hover:text-gold transition-colors duration-200"
+              >
+                <InstagramIcon size={18} />
+                Instagram
               </a>
             </div>
           </motion.div>
