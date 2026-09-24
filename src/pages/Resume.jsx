@@ -59,7 +59,7 @@ export default function Resume() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              href="/cv/CV-Gael-Randriamanana.pdf"
+              href="/cv/CV%20professionnel.pdf"
               download
               className="bg-gold text-night text-sm font-medium px-5 py-2.5 rounded-sm hover:brightness-110 transition-all duration-200"
             >
