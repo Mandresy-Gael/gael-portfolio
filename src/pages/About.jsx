@@ -37,8 +37,9 @@ export default function About() {
             <p>
               Ce qui m'intéresse : le moment où une interface se connecte
               vraiment à une base de données. Mes projets récents tournent
-              autour de CRUD complets, en PHP pur ou en Node/Express selon
-              le besoin.
+              autour de la gestion complète de données — créer, lire,
+              modifier, supprimer — en PHP pur ou en Node/Express selon le
+              besoin.
             </p>
           </motion.div>
 
