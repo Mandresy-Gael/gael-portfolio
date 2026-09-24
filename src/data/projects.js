@@ -7,7 +7,7 @@ const projects = [
     name: "Gestionnaire de Contacts",
     tagline: "CRUD de gestion de contacts",
     description:
-      "Ajout, recherche, modification et suppression de contacts sur une base MySQL. Premier projet où j'ai posé toute mon identité visuelle en Tailwind CSS.",
+      "Un carnet d'adresses en ligne pour conserver, retrouver et mettre à jour ses contacts sans feuille volante ni tableur. Techniquement : CRUD complet en Node/Express sur base MySQL avec recherche, et première mise en place de toute l'identité visuelle Tailwind CSS.",
     stack: ["Node.js", "Express", "EJS", "MySQL", "Tailwind CSS"],
     github: "https://github.com/Mandresy-Gael/Gestionnaire-de-contacts",
     image: contapp,
@@ -16,7 +16,7 @@ const projects = [
     name: "Hi'Kaly",
     tagline: "Site vitrine — restaurant gastronomique",
     description:
-      "Vitrine pour un restaurant malgache à Majunga : carte, histoire, réservation avec validation JS. La réservation n'écrit pas encore en base.",
+      "Un site vitrine pour qu'un restaurant malgache de Majunga présente sa carte, son histoire et reçoive des demandes de réservation. Techniquement : HTML/CSS/JS avec formulaire de réservation validé côté JavaScript (l'écriture en base n'est pas encore branchée).",
     stack: ["HTML5", "CSS3", "JavaScript"],
     github: "https://github.com/Mandresy-Gael/Hi-Kaly",
     image: hikaly,
@@ -25,7 +25,7 @@ const projects = [
     name: "FootAdmin",
     tagline: "Gestion de clubs et joueurs de football",
     description:
-      "CRUD complet sur clubs et joueurs, association dynamique, recherche par nom, dashboard avec stats calculées à la volée.",
+      "Un outil pour qu'un club gère ses joueurs sans tableur : ajout, recherche, statistiques automatiques. Techniquement : CRUD complet avec association dynamique clubs/joueurs et dashboard calculé à la volée.",
     stack: ["Node.js", "Express", "EJS", "MySQL", "Tailwind CSS v4"],
     github: "https://github.com/Mandresy-Gael/FootAdmin",
     image: foot,
@@ -34,7 +34,7 @@ const projects = [
     name: "Gestion de Tâches",
     tagline: "To-do list en PHP natif",
     description:
-      "Petit gestionnaire de tâches en PDO pur, sans framework. Requêtes préparées, badges de statut. Pas encore de pagination.",
+      "Une petite to-do list pour suivre ses tâches et leur statut, sans service payant ni dépendance lourde. Techniquement : PHP en PDO pur sans framework, requêtes préparées et badges de statut (la pagination n'est pas encore implémentée).",
     stack: ["PHP", "MySQL", "PDO"],
     github: "https://github.com/Mandresy-Gael/Gestion-de-taches-PHP-Mysql",
     image: null,
