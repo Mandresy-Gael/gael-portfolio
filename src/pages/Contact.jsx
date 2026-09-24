@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import PageTransition from "../components/PageTransition.jsx";
 
 const EMAIL = "randriamananamandresygael@gmail.com";
-const PHONE = "037 57 153 35";
+const PHONE = "032 66 944 96";
 const ADDRESS = "Majunga, Madagascar";
 
 const EMAILJS_SERVICE_ID = "service_im8g34b";
