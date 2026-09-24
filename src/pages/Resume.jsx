@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition.jsx";
 
 const formation = [
-  { period: "Déc. 2024 — aujourd'hui", title: "Licence en informatique", place: "École Supérieure Saint-Gabriel, Mahajanga" },
-  { period: "2024", title: "Baccalauréat, série A2", place: "Lycée Montfort Saint-Gabriel, Mahajanga" },
+  { period: "Déc. 2024 — aujourd'hui", title: "Licence 1 en informatique", place: "École Supérieure Saint-Gabriel, Mahajanga" },
+  { period: "2024", title: "Baccalauréat, série A2 — mention Assez bien", place: "Lycée Montfort Saint-Gabriel, Mahajanga" },
   { period: "2021", title: "BEPC, option B", place: "Lycée Chrystelle-Parc, Tamatave" },
+  { period: "2017", title: "CEPE", place: "Lycée Chrystelle-Parc, Tamatave" },
 ];
 
 const experience = [
@@ -16,8 +17,17 @@ const langues = [
   { name: "Français", level: "Courant" },
   { name: "Anglais", level: "Courant" },
   { name: "Malagasy", level: "Natif" },
-  { name: "Espagnol", level: "Notions" },
+  { name: "Espagnol", level: "Notion" },
 ];
+
+const competences = [
+  { title: "Bureautiques", items: ["Word", "Excel"] },
+  { title: "Programmation", items: ["Base en HTML/CSS", "Python"] },
+];
+
+const qualites = ["Rigoureux", "Ponctuel", "Minutieux"];
+
+const interets = ["Cuisine", "Lecture", "Basket-ball", "Jeux vidéos"];
 
 function Timeline({ items }) {
   return (
@@ -84,8 +94,38 @@ export default function Resume() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
           >
+            <h2 className="font-heading text-xl text-white mb-6">Compétences</h2>
+            <div className="grid sm:grid-cols-2 gap-element mb-14">
+              {competences.map((cat, i) => (
+                <motion.div
+                  key={cat.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className="border border-border rounded-sm p-6 bg-marine/40"
+                >
+                  <h3 className="font-heading text-xl text-white mb-4">{cat.title}</h3>
+                  <ul className="flex flex-wrap gap-2">
+                    {cat.items.map((it) => (
+                      <li key={it} className="text-sm text-cream border border-border rounded-sm px-3 py-1">
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="font-heading text-xl text-white mb-6">Langues</h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-14">
               {langues.map((l) => (
                 <span
                   key={l.name}
@@ -94,6 +134,41 @@ export default function Resume() {
                   {l.name} <span className="text-gold">({l.level})</span>
                 </span>
               ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+            className="grid sm:grid-cols-2 gap-12"
+          >
+            <div>
+              <h2 className="font-heading text-xl text-white mb-6">Qualités</h2>
+              <div className="flex flex-wrap gap-3">
+                {qualites.map((q) => (
+                  <span
+                    key={q}
+                    className="text-sm text-cream border border-border rounded-sm px-4 py-2"
+                  >
+                    {q}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="font-heading text-xl text-white mb-6">Centres d'intérêt</h2>
+              <div className="flex flex-wrap gap-3">
+                {interets.map((i) => (
+                  <span
+                    key={i}
+                    className="text-sm text-cream border border-border rounded-sm px-4 py-2"
+                  >
+                    {i}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
