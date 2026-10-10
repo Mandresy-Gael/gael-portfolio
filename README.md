@@ -72,6 +72,7 @@ public/
   numéro WhatsApp Business, ajoute-le à côté du téléphone.
 - `src/pages/Resume.jsx` : le contenu vient de ton CV PDF ; à tenir à jour si
   ta formation ou tes expériences changent (le PDF dans `public/cv/` aussi).
-- `public/cv/CV-Gael-Randriamanana.pdf` : remplace ce fichier quand tu mets ton
-  CV à jour, en gardant le même nom pour que le lien de téléchargement reste
-  valide.
+- `public/cv/CV-Gael-Randriamanana.pdf` : pour mettre le CV à jour, remplace ce
+  fichier en gardant exactement le même nom (sans espaces ni accents), puis
+  commit + push : Vercel redéploie sur la même URL, le lien du portfolio ne
+  change pas.

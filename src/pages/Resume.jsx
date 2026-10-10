@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition.jsx";
 
 const formation = [
-  { period: "Déc. 2024 — aujourd'hui", title: "Licence 1 en informatique", place: "École Supérieure Saint-Gabriel, Mahajanga" },
+  { period: "Déc. 2024 — aujourd'hui", title: "Formation en informatique, L2 en cours", place: "École Supérieure Saint-Gabriel, Mahajanga" },
   { period: "2024", title: "Baccalauréat, série A2 — mention Assez bien", place: "Lycée Montfort Saint-Gabriel, Mahajanga" },
   { period: "2021", title: "BEPC, option B", place: "Lycée Chrystelle-Parc, Tamatave" },
   { period: "2017", title: "CEPE", place: "Lycée Chrystelle-Parc, Tamatave" },
@@ -10,6 +10,8 @@ const formation = [
 
 const experience = [
   { period: "Déc. 2025 — aujourd'hui", title: "Membre — JCI Majunga", place: "Réunions locales, communication, esprit d'initiative" },
+  { period: "Oct. 2025", title: "Création d'un site de gestion des stocks" },
+  { period: "Sept. 2025", title: "Stage ouvrier, 4 semaines", place: "Société de manutention portuaire" },
   { period: "Mars 2025", title: "Maître de cérémonie", place: "Coordination d'évènement, prise de parole en public" },
 ];
 
@@ -22,7 +24,7 @@ const langues = [
 
 const competences = [
   { title: "Bureautiques", items: ["Word", "Excel"] },
-  { title: "Programmation", items: ["Base en HTML/CSS", "Python","ReactJS", "NodeJS","ExpressJS","PHP", "TailwindCSS", "MySQL"] },
+  { title: "Programmation", items: ["HTML/CSS", "JavaScript", "Python", "ReactJS", "NodeJS","ExpressJS","PHP", "TailwindCSS", "MySQL"] },
 ];
 
 const qualites = ["Rigoureux", "Ponctuel", "Minutieux"];
@@ -44,7 +46,7 @@ function Timeline({ items }) {
           <span className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-gold" />
           <p className="font-mono text-xs text-gold mb-1">{it.period}</p>
           <p className="text-white font-medium">{it.title}</p>
-          <p className="text-muted text-sm">{it.place}</p>
+          {it.place && <p className="text-muted text-sm">{it.place}</p>}
         </motion.li>
       ))}
     </ul>
@@ -69,8 +71,8 @@ export default function Resume() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              href="/cv/CV%20professionnel.pdf"
-              download
+              href="/cv/CV-Gael-Randriamanana.pdf"
+              download="CV-Gael-Randriamanana.pdf"
               className="bg-gold text-night text-sm font-medium px-5 py-2.5 rounded-sm hover:brightness-110 transition-all duration-200"
             >
               Télécharger le CV
