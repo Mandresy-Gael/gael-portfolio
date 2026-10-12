@@ -13,14 +13,14 @@ export default function Footer() {
           <a
             href="tel:0375715335"
             aria-label="Téléphone"
-            className="text-muted hover:text-gold transition-colors duration-200"
+            className="text-muted hover:text-gold hover:-translate-y-0.5 transition-all duration-200"
           >
             <Phone size={16} />
           </a>
           <a
             href="mailto:randriamananamandresygael@gmail.com"
             aria-label="Email"
-            className="text-muted hover:text-gold transition-colors duration-200"
+            className="text-muted hover:text-gold hover:-translate-y-0.5 transition-all duration-200"
           >
             <Mail size={16} />
           </a>
@@ -29,7 +29,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
-            className="text-muted hover:text-gold transition-colors duration-200"
+            className="text-muted hover:text-gold hover:-translate-y-0.5 transition-all duration-200"
           >
             <GithubIcon size={16} />
           </a>
@@ -38,7 +38,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Facebook"
-            className="text-muted hover:text-gold transition-colors duration-200"
+            className="text-muted hover:text-gold hover:-translate-y-0.5 transition-all duration-200"
           >
             <FacebookIcon size={16} />
           </a>
@@ -47,7 +47,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
-            className="text-muted hover:text-gold transition-colors duration-200"
+            className="text-muted hover:text-gold hover:-translate-y-0.5 transition-all duration-200"
           >
             <InstagramIcon size={16} />
           </a>

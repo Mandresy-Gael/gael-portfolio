@@ -43,7 +43,13 @@ function Timeline({ items }) {
           transition={{ duration: 0.4, delay: i * 0.06 }}
           className="border-l border-border pl-5 relative"
         >
-          <span className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-gold" />
+          <motion.span
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 300, damping: 18, delay: i * 0.06 + 0.15 }}
+            className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-gold"
+          />
           <p className="font-mono text-xs text-gold mb-1">{it.period}</p>
           <p className="text-white font-medium">{it.title}</p>
           {it.place && <p className="text-muted text-sm">{it.place}</p>}
@@ -105,12 +111,12 @@ export default function Resume() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="border border-border rounded-sm p-6 bg-marine/40"
+                  className="border border-border rounded-sm p-6 bg-marine/40 hover:border-gold/40 transition-colors duration-300"
                 >
                   <h3 className="font-heading text-xl text-white mb-4">{cat.title}</h3>
                   <ul className="flex flex-wrap gap-2">
                     {cat.items.map((it) => (
-                      <li key={it} className="text-sm text-cream border border-border rounded-sm px-3 py-1">
+                      <li key={it} className="text-sm text-cream border border-border rounded-sm hover:border-gold/60 hover:text-gold transition-colors duration-200 px-3 py-1">
                         {it}
                       </li>
                     ))}
@@ -131,7 +137,7 @@ export default function Resume() {
               {langues.map((l) => (
                 <span
                   key={l.name}
-                  className="text-sm text-cream border border-border rounded-sm px-4 py-2"
+                  className="text-sm text-cream border border-border rounded-sm hover:border-gold/60 hover:text-gold transition-colors duration-200 px-4 py-2"
                 >
                   {l.name} <span className="text-gold">({l.level})</span>
                 </span>
@@ -152,7 +158,7 @@ export default function Resume() {
                 {qualites.map((q) => (
                   <span
                     key={q}
-                    className="text-sm text-cream border border-border rounded-sm px-4 py-2"
+                    className="text-sm text-cream border border-border rounded-sm hover:border-gold/60 hover:text-gold transition-colors duration-200 px-4 py-2"
                   >
                     {q}
                   </span>
@@ -165,7 +171,7 @@ export default function Resume() {
                 {interets.map((i) => (
                   <span
                     key={i}
-                    className="text-sm text-cream border border-border rounded-sm px-4 py-2"
+                    className="text-sm text-cream border border-border rounded-sm hover:border-gold/60 hover:text-gold transition-colors duration-200 px-4 py-2"
                   >
                     {i}
                   </span>

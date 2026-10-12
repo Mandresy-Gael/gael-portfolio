@@ -38,7 +38,18 @@ export default function Navbar() {
           {links.map((link) => (
             <li key={link.to}>
               <NavLink to={link.to} className={linkClass} end={link.to === "/"}>
-                {link.label}
+                {({ isActive }) => (
+                  <span className="relative inline-block py-1">
+                    {link.label}
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-underline"
+                        className="absolute left-0 right-0 -bottom-0.5 h-px bg-gold"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                      />
+                    )}
+                  </span>
+                )}
               </NavLink>
             </li>
           ))}
@@ -46,7 +57,7 @@ export default function Navbar() {
 
         <a
           href="/cv/CV-Gael-Randriamanana.pdf"
-          download
+          download="CV-Gael-Randriamanana.pdf"
           className="hidden lg:inline-block border border-gold text-gold text-sm px-4 py-2 rounded-sm hover:bg-gold hover:text-night transition-colors duration-200"
         >
           Télécharger le CV
@@ -74,12 +85,17 @@ export default function Navbar() {
             className="lg:hidden overflow-hidden bg-night border-b border-border"
           >
             <ul className="flex flex-col px-6 py-4 gap-4 font-body text-muted">
-              {links.map((link) => (
-                <li key={link.to}>
+              {links.map((link, i) => (
+                <motion.li
+                  key={link.to}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.05 * i }}
+                >
                   <NavLink to={link.to} onClick={() => setOpen(false)} className={linkClass} end={link.to === "/"}>
                     {link.label}
                   </NavLink>
-                </li>
+                </motion.li>
               ))}
               <li>
                 <a href="/cv/CV-Gael-Randriamanana.pdf" download onClick={() => setOpen(false)} className="text-gold">

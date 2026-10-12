@@ -14,11 +14,12 @@ const projects = [
   },
   {
     name: "Hi'Kaly",
-    tagline: "Site vitrine — restaurant gastronomique",
+    tagline: "Site, réservations et commandes — restaurant gastronomique",
     description:
-      "Un site vitrine pour qu'un restaurant malgache de Majunga présente sa carte, son histoire et reçoive des demandes de réservation. Techniquement : HTML/CSS/JS avec formulaire de réservation validé côté JavaScript (l'écriture en base n'est pas encore branchée).",
-    stack: ["HTML5", "CSS3", "JavaScript"],
+      "Un site pour qu'un restaurant malgache de Majunga présente sa carte, prenne des réservations et des commandes, avec un espace admin pour tout suivre. Techniquement : front React et Tailwind, API PHP et MySQL dans le dépôt. La démo en ligne est une version portée sur Lovable, avec sa propre base de données et sans paiement réel.",
+    stack: ["React", "Tailwind CSS", "PHP", "MySQL"],
     github: "https://github.com/Mandresy-Gael/Hi-Kaly",
+    demo: "https://hikaly-restaurant.lovable.app",
     image: hikaly,
   },
   {

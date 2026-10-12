@@ -61,12 +61,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="border border-border rounded-sm p-6 bg-marine/40"
+                className="border border-border rounded-sm p-6 bg-marine/40 hover:border-gold/40 transition-colors duration-300"
               >
                 <h3 className="font-heading text-xl text-white mb-4">{cat.title}</h3>
                 <ul className="flex flex-wrap gap-2">
                   {cat.items.map((it) => (
-                    <li key={it} className="text-sm text-cream border border-border rounded-sm px-3 py-1">
+                    <li key={it} className="text-sm text-cream border border-border rounded-sm hover:border-gold/60 hover:text-gold transition-colors duration-200 px-3 py-1">
                       {it}
                     </li>
                   ))}
